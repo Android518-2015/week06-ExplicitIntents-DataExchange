@@ -1,0 +1,4 @@
+INDEX VERSION 1.127+/home/tricia/week06-intent-data-exchange/.metadata/.plugins/org.eclipse.jdt.core
+1561076121.index
+3288690723.index
+792095118.index
