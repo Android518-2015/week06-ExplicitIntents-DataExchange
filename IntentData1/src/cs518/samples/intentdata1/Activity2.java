@@ -22,11 +22,11 @@ public class Activity2 extends Activity {
 		String value = getIntent().getExtras().getString("DATA1");
 		TextView tv1 = (TextView) findViewById(R.id.tv1);
 		if (value == null || value.isEmpty()) {
-			tv1.setText("DATA1 no data recieved");
+			tv1.setText(R.string.nodata);
 			tv1.setTextColor(Color.RED);
 		} else {
 			MainActivity.logIt("DATA1 " + value);
-			tv1.setText("DATA1 " + value);
+			tv1.setText(value);
 			tv1.setTextColor(Color.MAGENTA);
 		}
 	} // onCreate()

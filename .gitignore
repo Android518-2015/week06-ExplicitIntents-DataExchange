@@ -2,3 +2,5 @@ gen/
 bin/
 .svn/
 RemoteSystemsTempFiles/
+.metadata/
+.recommenders/
