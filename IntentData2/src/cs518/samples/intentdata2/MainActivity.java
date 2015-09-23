@@ -8,9 +8,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
 /**
- * App used to send data to child activity, 
- * then receive data from child activity
+ * App used to send data to child activity, then receive data from child
+ * activity
  * 
  * @author tricia
  *
@@ -50,24 +51,31 @@ public class MainActivity extends Activity {
 	 *            Intent can be used to return (extras) result data to caller
 	 */
 	protected void onActivityResult(int request, int result, Intent i) {
-		switch(result) {
+		String data;
+		switch (result) {
 		case RESULT_OK:
-						logIt("result ok");
+			logIt("result ok");
 			if (i != null && i.hasExtra("DATA2")) {
-				tv3.setText(i.getExtras().getString("DATA2", "No Data"));
+				data = i.getExtras().getString("DATA2");
+				Log.d("DATA", data);
+				if (data == null) 
+					tv3.setText(R.string.nodata);
+				else
+					tv3.setText(data);
 			} else {
 				tv3.setText("No intent or no extras");
 			}
+			tv3.setTextColor(Color.MAGENTA);
 			break;
-		case RESULT_CANCELED :
+		case RESULT_CANCELED:
 		default:
 			logIt("result canceled");
 			tv3.setText("Cancel returned from child Activity");
+			tv3.setTextColor(Color.RED);
 		}
 		tv2.setVisibility(View.VISIBLE);
 		tv3.setVisibility(View.VISIBLE);
-		tv3.setTextColor(Color.BLUE);
-	} //onActivityResult()
+	} // onActivityResult()
 
 	/**
 	 * Simple wrapper method for Log.d()

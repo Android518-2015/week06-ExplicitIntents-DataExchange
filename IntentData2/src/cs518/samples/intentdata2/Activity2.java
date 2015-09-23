@@ -30,11 +30,11 @@ public class Activity2 extends Activity {
 		TextView tv2 = (TextView) findViewById(R.id.a2tv2);
 
 		if (value == null || value.isEmpty()) {
-			tv2.setText("DATA1 no data recieved");
+			tv2.setText(R.string.nodata);
 			tv2.setTextColor(Color.RED);
 		} else {
 			MainActivity.logIt("DATA1 " + value);
-			tv2.setText("DATA1 " + value);
+			tv2.setText(value);
 			tv2.setTextColor(Color.MAGENTA);
 		}
 	} // onCreate()
