@@ -15,7 +15,7 @@ MainActivity sends data to Activity2 & Activity3<br>
 Activity2 sends a result code and data back to MainActivity<br>
 Activity3 sends a result code and data back to MainActivity
 
-Both return an Intent so determine origin (is it from Activity2 or Activity3) we check the request code.
+Both return an Intent so to determine origin (is it from Activity2 or Activity3) we check the request code.
 
 
 
