@@ -8,7 +8,7 @@ Multiple Implicit and Explicit intents in one app
 # IntentData1
 MainActivity sends data to Activity2
 # IntentData2
-MainActivity sends data to Activity2
+MainActivity sends data to Activity2<br>
 Activity2 sends a result code and data back to MainActivity
 # IntentData2
 MainActivity sends data to Activity2 & Activity3
